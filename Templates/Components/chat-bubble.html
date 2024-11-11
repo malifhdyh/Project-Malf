@@ -1,0 +1,53 @@
+<!-- Chat Bubble -->
+<div class="chat-bubble" id="chatBubble">
+    <!-- Chat Icon -->
+    <button class="chat-icon" id="chatIcon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="notification-badge">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chatWindow">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <div class="agent-avatar">
+                    <img src="https://png.pngtree.com/png-vector/20230316/ourlarge/pngtree-admin-and-customer-service-job-vacancies-vector-png-image_6650726.png" alt="Agent">
+                    <span class="status-badge"></span>
+                </div>
+                <div class="agent-info">
+                    <h3>Customer Service</h3>
+                    <p>Typically replies in minutes</p>
+                </div>
+            </div>
+            <button class="close-chat" id="closeChat">&times;</button>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message agent">
+                <div class="message-content">
+                    Hi there! 👋 How can I help you today?
+                </div>
+                <div class="message-time">12:00</div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <textarea 
+                id="messageInput" 
+                placeholder="Type your message..."
+                rows="1"
+            ></textarea>
+            <button id="sendMessage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>

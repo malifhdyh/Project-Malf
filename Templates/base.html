@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALF - Create Without Limits</title>
+    
+    <!-- CSS utama -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/hero.html' %}
+    {% include 'components/about.html' %}
+    {% include 'components/services.html' %}
+    {% include 'components/templates.html' %}
+    {% include 'components/footer.html' %}
+    {% include 'components/chat-bubble.html' %}
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/components/darkMode.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/components/templateSlider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/components/mobileMenu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/components/chat.js') }}"></script>
+</body>
+</html>

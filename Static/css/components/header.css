@@ -1,0 +1,211 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+    background-color: rgba(56, 153, 236, 0.1);
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-item:hover {
+    color: var(--accent-color);
+    background-color: var(--bg-secondary);
+}
+
+/* Dropdown arrow */
+.nav-item.dropdown {
+    padding-right: 24px;
+}
+
+.nav-item.dropdown::after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.nav-item.dropdown:hover::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Login button */
+.btn-secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(56, 153, 236, 0.1);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Get Started button */
+.btn-primary {
+    background-color: var(--accent-color);
+    color: black;
+    border: none;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 153, 236, 0.2);
+}
+
+/* Theme toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+}
+
+.theme-toggle:hover {
+    background-color: var(--bg-secondary);
+    transform: rotate(15deg);
+    color: var(--accent-color);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: scale(1.1);
+}
+
+/* Globe icon */
+.globe-icon {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover .globe-icon {
+    transform: rotate(20deg);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .header {
+        padding: 20px 5%;
+    }
+    
+    .nav-menu {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .action-buttons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 4%;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .btn-secondary,
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    box-shadow: 0 4px 12px rgba(56, 153, 236, 0.4);
+}
+
+[data-theme="dark"] .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
