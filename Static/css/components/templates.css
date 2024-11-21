@@ -1,12 +1,16 @@
 /* Component styles */
 .template-section {
     background-color: #fff0f5;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 60px 0;
 }
 
 .template-container {
-    max-width: var(--container-width);
+    max-width: 1200px;
     margin: 0 auto;
-    padding: var(--section-padding);
+    padding: 0 20px;
     position: relative;
 }
 
